@@ -721,7 +721,7 @@ function AddNewPlace() {
                       </Form.Group>
 
 
-                      <div className=''><p>You have added 0 images</p></div>
+                      <div className=''><p>You have added 0adsfadsf images</p></div>
                       <Row className="place_btn">
                         <Col md="6">
                           <Button variant="primary" onClick={BackAvailaibility}>

@@ -244,17 +244,15 @@ input[type="radio"]{
   }
   
   .d1 {
-    /* display: inline-block; */
-    /* margin-left: 10px; */
     vertical-align: middle;
     text-align: center;
     cursor: pointer;
     background-color: #dcd9d9;
-    /* color: black; */
     padding: 5px 20px;
     border-radius: 3px;
-    /* margin-left: 20px; */
-    
+  }
+  .d1:visited{
+    color: white;
   }
 
 input[type="radio"]:checked +.d1{
@@ -317,3 +315,82 @@ input[type="radio"]:checked +.d1{
     transform-origin: center bottom 0px;
 }
 
+.btncolorchange{
+background-color: #7f0c86;
+color: white;
+}
+.btncolorchange:hover{
+    background-color: #7f0c86 !important;
+}
+.btncolor{
+    background-color: white;
+    border: 1px solid #7f0c86 !important;
+    color:#7f0c86;
+    font-weight:600;
+    
+}
+.btncolor:hover{
+    background-color: #7f0c86 !important;
+}
+.text{
+    text-align: justify;
+}
+
+.css-1mgnakj-MuiTypography-root-PrivatePickersToolbarText-root.Mui-selected {
+    color: rgba(255, 255, 255 ) !important;
+}
+.css-1mgnakj-MuiTypography-root-PrivatePickersToolbarText-root{
+    color:white !important;
+}
+
+.css-1lfjyjz-MuiTypography-root-PrivatePickersToolbarText-root-MuiTimePickerToolbar-separator {
+    color:white !important;
+}
+
+.css-ihhycx-MuiTimePickerToolbar-amPmSelection .MuiTimePickerToolbar-ampmLabel {
+    color:white !important;
+}
+.css-1hbyad5-MuiTypography-root {
+    color:white !important;
+}
+
+.css-umzx0k-MuiClock-pin {
+    background-color: #b41ebd !important;
+}
+
+.css-d0vs79-MuiClockPointer-root {
+     background-color: #b41ebd !important;
+}
+
+.css-12t0dn4-MuiClockPointer-thumb,.css-eg3pzz-MuiClockPointer-thumb  {
+    background-color: #d36cd8 !important;
+    border: 16px solid #b41ebd !important;
+}
+
+.MuiClock-wrapper span{ 
+    color:white !important;
+} 
+.MuiInputBase-root{
+    height: 40px;
+}
+
+.css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
+    background-color: #7f0c86;
+}
+
+.MuiGrid-root ,.MuiTypography-root {
+    color:white !important;
+}
+.MuiButtonBase-root:hover{
+    background-color: #7f0c86 !important;
+    color: white;
+}
+
+.css-195y93z-MuiButtonBase-root-MuiPickersDay-root.Mui-selected{
+    background-color: #7f0c86 !important;
+}
+
+input:checked + label { 
+    color:white !important;
+
+}

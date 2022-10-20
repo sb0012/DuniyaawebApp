@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useNavigate } from 'react-router-dom';
 import AddNewPlace from './AddNewPlace';
+import "./addnewplace.css";
 // import Header from '../../components/Header';
 
 function Popup2() {
@@ -26,23 +27,24 @@ function Popup2() {
 
       <Modal show={show} onHide={handleClose} style={{marginTop:"150px"}}>
         <Modal.Header onClick={handleHome} closeButton>
-          <Modal.Title>Which place you are wiling to add?</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-        <p>What to choose?</p>
-        <p className='mt-2'>If you want to add a place which you do not own and it is public,then choose Public Place</p>
-      
-        <p className='mt-3'>If you want add your own place then choose My Place</p>
-      
-        </Modal.Body>
-        <Modal.Footer className="justify-content-between">
-          <Button variant="secondary" onClick={handleChange}>
+          <Modal.Title className="ms-3">Are you at your Shop/Office/Business Location,right now?</Modal.Title>
+             <Modal.Footer className="justify-content-between">
+          <Button variant="secondary" onClick={handleChange} className="btncolorchange">
             Yes,I am here
           </Button>
-          <Button variant="primary" onClick={handleHome}>
+          <Button variant="primary" onClick={handleHome} className="btncolor">
            No,I'm not
           </Button>
         </Modal.Footer>
+        <Modal.Body>
+        <p>Why we are asking this question ?</p>
+        <p className='mt-2 text'>well,it will be more easy to detect your accurate Shop/Office/Business address, if you add a place by staying at your Business Location.So that the users who want to visit your place can be easily find your address.</p>
+      
+
+      
+        </Modal.Body>
+   
       </Modal>
     </>
   );

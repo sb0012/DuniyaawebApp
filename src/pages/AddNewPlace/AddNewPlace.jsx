@@ -11,6 +11,7 @@ import Popup from './Popup';
 import { useNavigate } from 'react-router-dom';
 import {FormGroup,Input,Label} from 'reactstrap';
 import Time from './Time';
+import Date from './Date';
 
 // import Modal from 'react-bootstrap/Modal';
 
@@ -228,9 +229,10 @@ function AddNewPlace() {
 
                       <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Place Reg Date</Form.Label>
-                        <Form.Control  type="date" placeholder="Place Reg Date" name="date" value={formValues.date}
+                        {/* <Form.Control  type="date" placeholder="Place Reg Date" name="date" value={formValues.date}
               onChange={handleChange} />
-              <p className="text-danger mt-3">{formErrors.date}</p>
+              <p className="text-danger mt-3">{formErrors.date}</p> */}
+                          <Date/>
 
                       </Form.Group>
 
@@ -429,7 +431,7 @@ function AddNewPlace() {
                     <Form className='placeinfo' onSubmit={hanSubmit} >
                       <Form.Group as={Row} className="mb-2 ">
                         <Form.Label as="legend" column sm={4}>
-                          Do you provide 24 * 7 Service
+                          Do you provide 24 * 7 Service {":"}
                         </Form.Label>
                         
                         <Col sm={2} className="ms-4">
@@ -469,7 +471,7 @@ function AddNewPlace() {
                       <Form.Group as={Row} className="mb-2">
                      
                         <Form.Label as="legend" column sm={4}>
-                          Working Days 
+                          Working Days {":"}
                         </Form.Label>
                         
                         <Col sm={6}>
@@ -529,7 +531,7 @@ function AddNewPlace() {
                       {shows ?(
                       <Form.Group as={Row} className="mb-2">
                         <Form.Label as="legend" column sm={4} className="mt-4">
-                          Working hour timing
+                          Working hour timing {":"}
                         </Form.Label>
                         
                         <Col sm={3} className="mt-3">
@@ -572,7 +574,7 @@ function AddNewPlace() {
                       <Form.Group as={Row} className="mb-2">
                        {lunchShow ?   (
                          <Form.Label as="legend" column sm={4} className="mt-4">
-                          Lunch hour timing 
+                          Lunch hour timing {":"}
                         </Form.Label>
                         ):""}
                         <Col sm={3} className="mt-3">
@@ -605,11 +607,11 @@ function AddNewPlace() {
                        {shows ?(
                       <Form.Group as={Row} className="mb-2">
                         <Form.Label as="legend" column sm={4} className="mt-3">
-                        No Lunch Timing
+                      
                         </Form.Label>
                         
                         <Col sm={4} className="mt-4">
-                          <Form.Check type="checkbox" label="No Lunch Hours" name="check" value={formV.check}
+                          <Form.Check type="checkbox" label="No Lunch Hours :" name="check" value={formV.check}
               onChange={hanChange} onClick={()=> setLunchShow(!lunchShow)}/>
               <p className="text-danger mt-3">{error.check}</p>
 
@@ -618,7 +620,7 @@ function AddNewPlace() {
                       </Form.Group>):""}
                       <Form.Group as={Row} className="mb-2">
                         <Form.Label as="legend" column sm={4}>
-                          Do you provide exchange facility
+                          Do you provide exchange facility {":"}
                         </Form.Label>
                         
                         <Col sm={2} className="ms-4">
@@ -650,8 +652,8 @@ function AddNewPlace() {
                       </Form.Group>
                           {exchange?(
                       <Form.Group as={Row} className="mb-2">
-                        <Form.Label as="legend" column sm={4} className="mt-3">
-                          Exchange hour timing  
+                        <Form.Label as="legend" column sm={4} className="mt-2">
+                          Exchange hour timing  {":"}
                         </Form.Label>
                      
                         

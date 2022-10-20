@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useNavigate } from 'react-router-dom';
 import AddNewPlace from './AddNewPlace';
+import "./addnewplace.css";
 // import Header from '../../components/Header';
 
 function Popup() {
@@ -30,13 +31,13 @@ function Popup() {
 
       <Modal show={show} onHide={handleClose} style={{marginTop:"150px"}}>
         <Modal.Header  onClick={handleHome} closeButton>
-          <Modal.Title>Which place you are wiling to add?</Modal.Title>
         </Modal.Header>
+          <Modal.Title className="ms-3">Which place you are wiling to add?</Modal.Title>
         <Modal.Footer className="justify-content-between">
-          <Button variant="secondary" onClick={handleNext}>
+          <Button variant="secondary" onClick={handleNext} className="btncolorchange">
             My Place
           </Button>
-          <Button variant="primary" onClick={handleChange}>
+          <Button variant="primary" onClick={handleChange} className="btncolor">
             Public Place
           </Button>
         </Modal.Footer>

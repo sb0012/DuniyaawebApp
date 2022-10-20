@@ -1,0 +1,247 @@
+/* Product Price Visibility */
+.product_price{
+    box-shadow: inset 1px 1px 17px #ccc;
+    border-radius: 7px;
+}
+/* Product Price Visibility ul */
+.prdct_price ul{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+/* lable checkbox */
+.prdct_price ul li{
+    list-style:none;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.prdct_price li h5{
+    font-size: 13px;
+    padding-top: 15px;
+    font-weight: 600;
+}
+
+.product_price {
+    padding: 18px 16px;
+}
+
+.public{
+    width: 100% !important;
+    /* padding: 0px 12px; */
+    
+}
+
+.public span{
+    padding: 2px 17px!important;
+}
+
+.total_views p{
+    font-weight: 700;
+    text-align: right;
+    font-size: 13px;
+    margin-bottom: 6px;
+    margin-top: 10px;
+}
+
+.total_views p span{
+    color: #7f0c86;
+}
+
+.edit_prdct li button{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/*************** switch button ***************/
+.toggle-button-cover
+{
+    display: table-cell;
+    position: relative;
+    /* width: 200px; */
+    height: auto;
+    box-sizing: border-box;
+}
+
+.button-cover
+{
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+}
+
+.button-cover:before
+{
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover, .knobs, .layer
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button
+{
+    position: relative;
+    top: 50%;
+        width: 43px;
+    height: 21px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.button.r, .button.r .layer
+{
+    border-radius: 100px;
+}
+
+.button.b2
+{
+    border-radius: 2px;
+}
+
+.checkbox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs
+{
+    z-index: 2;
+}
+
+.layer
+{
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+/* Button 3 */
+#button-3 .knobs:before
+{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 15px;
+    height: 6px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 7px 4px;
+    background-color: #03A9F4;
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+}
+
+#button-3 .checkbox:active + .knobs:before
+{
+    width: 46px;
+    border-radius: 100px;
+}
+
+#button-3 .checkbox:checked:active + .knobs:before
+{
+    margin-left: -26px;
+}
+
+#button-3 .checkbox:checked + .knobs:before
+{
+    content: '';
+    left: 24px;
+    background-color: #F44336;
+}
+
+#button-3 .checkbox:checked ~ .layer
+{
+    background-color: #fcebeb;
+}   
+
+/************** switch button *************/
+
+.switch_price p{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.switch_price .toggle-button-cover{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 17px;
+}
+
+
+.add_prdct{    
+    text-align: right;
+}
+
+.add_prdct a{
+    color:#7f0c86;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+
+.add_prdct p{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 16px;
+}
+
+.add_product{
+    background: #eee;
+    border-radius: 5px;
+    padding:10px;
+    margin-bottom: 10px;
+    /* animation: flip-scale-down-diag-2 0.5s linear both; */
+     /* transition: 4s ease; */
+     /* animation: fadeInAnimation ease 3s;  */
+     transition: all .5s ease-in-out;
+    
+}
+.add_product:target {
+    height: 200px;
+  }
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.add_product a{
+    color: #7f0c86;
+    font-weight: 700;
+    font-size: 10px;
+    text-decoration: none;
+}

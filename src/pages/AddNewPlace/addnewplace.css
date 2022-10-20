@@ -1,0 +1,319 @@
+
+.add_bg{
+    background: url(../../assets/images/addbg.png);
+    height: 171px;
+    background-position: top;
+    border-radius: 21px;
+    background-color: currentcolor;
+    margin: 9px 10px;
+}
+
+.add_title{
+    padding-top: 50px;
+    padding-bottom: 69px;
+}
+
+
+.add_title h1{
+    color: #fff;
+    font-weight: 200;
+  
+}
+
+.add_title h6{
+    color: #fff !important;
+    margin-top: 22px;
+    text-align: right;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.add_title h6 span{
+    font-weight: 600;
+}
+
+.tab_class{
+    justify-content: center;
+}
+
+.days-btn{}
+
+/* .days-btn button{
+    display: inline-block;
+    background: transparent;
+    color: rgb(202, 17, 17);
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 19px;
+    margin-right: 5px;
+} */
+
+.opacity_class{
+    opacity: 0.3;
+}
+
+/************* working days btn style start *************/
+
+.colors{
+    margin: 4px;
+    background-color: #7f0c86;
+    border-radius: 4px;
+    border: 1px solid #fce4c5;
+    overflow: hidden;
+    float: left;
+}
+.cats{
+    margin: 4px;
+    background-color:white;
+    border-radius: 4px;
+    border: 1px solid #fce4c5;
+    overflow: hidden;
+    float: left;
+}
+
+.colors label {
+    float: left;
+    line-height: 22px;
+    width: 24px;
+    height: 24px;
+   
+  
+  }
+  .cats label {
+    float: left;
+    line-height: 22px;
+    width: 24px;
+    height: 24px;
+    
+  
+  }
+  .colors label span {
+    text-align: center;
+    padding: 3px 0;
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    
+  }
+  .cats label span{
+text-align: center;
+padding: 3px 0;
+display: block;
+font-size: 11px;
+    font-weight: 600;
+  }
+
+  .colors label input {
+    position: absolute;
+    display: none;
+    
+  }
+
+  .cats label input{
+    position: absolute;
+    display: none;
+    
+  }
+  /* selects all of the text within the input element and changes the color of the text */
+  .colors label input + span{color: rgb(248, 244, 244);}
+  .cats label input + span{color: rgb(0, 0, 0);}
+  
+  
+  /* This will declare how a selected input will look giving generic properties */
+  .colors input:checked + span {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+}
+.cats input:checked + span {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+  
+  
+  /*
+  This following statements selects each category individually that contains an input element that is a checkbox and is checked (or selected) and chabges the background color of the span element.
+  */
+ 
+
+      
+      .action input:checked + span{background-color: #7f0c86;}
+      .comedy input:checked + span{background-color: white; }
+      .crime input:checked + span{background-color: white;}
+      .history input:checked + span{background-color: white;}
+      .reality input:checked + span{background-color: white;}
+      .news input:checked + span{background-color: white;}
+      .scifi input:checked + span{background-color: white;}
+      .sports input:checked + span{background-color: white;}
+    
+/****************** working days btn style end ***************/
+
+.tab_class button span{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.tab_class .nav-link{
+    color:#c9c3c9;
+}
+
+.tab_class .nav-item.show .nav-link, .tab_class .nav-link.active{
+    color:#7f0c86;
+}
+
+.placeinfo{}
+
+.placeinfo .form-control, .form-select{
+    background: #ededed;
+    border: none;
+    height: 44px;
+}
+
+.placeinfo .form-select, .form-label{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.placeinfo a{
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.placeinfo p{
+    font-size: 12px;
+    font-weight: 600;
+}
+.place_btn{
+    margin-top: 20px;
+}
+
+.place_btn button{
+    background: #7f0c86;
+    color:#fff;
+    border:none;
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 20px;
+}
+
+.add_place_tab{
+    margin-bottom: 30px;
+}
+
+.place_cat{}
+
+.place_cat li{
+    list-style: none;
+    display: inline-block;
+}
+
+.place_cat li button{
+    background: transparent;
+    border: 1px solid #7f0c86;
+    color: #7f0c86;
+    margin-right: 21px;
+    padding: 4px 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.placeinfo .form-check-label{
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+.hours{
+    height:28px!important;
+}
+
+.uploadimg{
+    height:auto!important;
+}
+
+.tab_class button span i{
+    font-size: 27px;
+}
+
+input[type="radio"]{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  
+  .d1 {
+    /* display: inline-block; */
+    /* margin-left: 10px; */
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dcd9d9;
+    /* color: black; */
+    padding: 5px 20px;
+    border-radius: 3px;
+    /* margin-left: 20px; */
+    
+  }
+
+input[type="radio"]:checked +.d1{
+    background-color: #7f0c86;
+  }
+
+   .heading{
+    text-align: center;
+    font-size:0.8em;
+    
+  }
+
+.center-align{
+    display: inline-block;
+    align-items: center;
+}
+.css-tfwo93-MuiClock-squareMask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: auto;
+    outline: 0;
+    touch-action: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:#7f0c86;
+    color: white;
+}
+
+
+
+.css-88nwcr-MuiPickersToolbar-root-MuiTimePickerToolbar-root {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background-color: #7f0c86;
+    color: white;
+}
+
+.css-d0vs79-MuiClockPointer-root {
+    width: 2px;
+    background-color: #b41ebd;
+    position: absolute;
+    left: calc(50% - 1px);
+    bottom: 50%;
+    transform-origin: center bottom 0px;
+}
+

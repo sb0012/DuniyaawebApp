@@ -1,0 +1,36 @@
+/* body{
+    background: url("../../assets/images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+} */
+.Center{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: auto;
+    font-weight: bold;
+    /* color: white; */
+    background-color: #7f0c86;
+    padding: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+
+}
+.bolds{
+    text-align: center;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 80px;
+    background-color: #7f0c86;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+}
+.textcolor{
+    color: white;
+    padding-bottom: 10px;
+}

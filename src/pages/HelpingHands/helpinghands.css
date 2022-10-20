@@ -1,0 +1,184 @@
+
+#helping_hands{
+    background: #faf0fb;
+    border-bottom-left-radius: 77px;
+    border-bottom: 12px solid #f9e3fb;
+    margin-left: 17px;
+}
+.hands_img{
+    background: url(../../assets/images/heart1.png);
+}
+.slider_bg{
+    padding-top: 48px;
+    padding-bottom: 14px;
+}
+
+
+.slider_bg h1{
+    font-weight: 300;
+    font-size: 38px;
+    margin-top: 18px;
+}
+
+.slider_bg h1 span{
+    color: #7f0c86;
+    font-weight: 600;
+}
+
+.slider_bg p{
+    color: #807980;
+    line-height: 29px;
+    padding-top: 10px;
+}
+
+.u_post{}
+
+.u_post h2{
+    font-weight: 400;
+    margin-top: 28px;
+}
+
+.need_help{}
+
+.need_help h5{}
+
+.need_help h5 span{    
+    font-size: 11px;
+    color: #847f84;
+    font-weight: 600;
+}
+
+.image img{
+    width:100%;
+    border-radius: 15px;
+}
+
+.image_div{
+    margin-bottom: 10px;
+}
+
+.image{
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.image img{
+    /* height:150px; */
+    width:100%;
+    transform-origin: 50% 50%;
+    transition: transform 30s linear;
+    border-radius: 15px;
+  }
+
+   .image img:hover{    
+    transform: scale(5) rotate(0.1deg);
+    border-radius: 15px;
+  }
+
+  .image_desc{
+      position: absolute;
+  }
+
+  .image_desc h6{
+    position: relative;
+    bottom: 56px;
+    color: #fff;
+    font-size: 14px;
+    background: rgba(255,255,255,0.4);
+    padding: 10px 9px;
+  }
+
+.post_u{
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: inset 1px 1px 50px #ebe9e9;
+    margin-right: 10px;
+}
+
+.need_icon{
+    text-align: right;
+}
+.need_icon i{
+    color:#ff0000;
+}
+
+.add_map{
+    border-bottom: 1px solid #eee;
+}
+
+.map_a{
+    margin-bottom: 26px;
+}
+.map_a p{}
+
+.map_a p span{
+    font-size: 13px;
+    font-weight: 500;
+    color: #656065;
+}
+
+.n_help img{
+    width: 100%;
+}
+
+.map_a h6{
+    font-size: 13px;
+    color: #000;
+    font-weight: 600;
+}
+
+.post_g{
+    padding-top: 5px;
+}
+.post_g a{
+    color: #7f0c86;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.thumbs a i{
+    color:#a8a8a8;
+    margin-left: 10px;
+}
+.thumbs{
+    text-align: right;
+    margin-top: 6px;
+}
+.map_a h6 span{
+    color: #656065;
+    font-weight: 400;
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+.slider_bg button{
+    background: transparent;
+    border: 1px solid #7f0c86;
+    padding: 7px 57px;
+    border-radius: 13px;
+    margin-bottom: 23px;
+    color: #151215;
+    
+}
+
+.slider_bg button img{
+    width: 32px;
+    margin-right: 10px;
+}
+
+.video{
+    margin-bottom: 30px;
+}
+
+.video h2{
+    font-weight: 400;
+    margin-top: 25px;
+    margin-bottom:10px;
+}
+
+/**************************** gallery css start *****************/
+
+
+
+/**************************** gallery css end *****************/

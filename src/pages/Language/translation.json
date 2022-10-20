@@ -1,0 +1,34 @@
+{
+	"en": {
+		"translation": {
+			"welcome": "Welcome to React, react-i18next and date-fns",
+			"selectLanguage": "Select language:",
+			"dates": {
+				"fullDate": "The date is {{ date, short }}",
+				"localisedDate": "In my language, we write a date as: {{ date, long }}",
+				"weekDay": "Today is a {{ date, EEEE }}.",
+				"postedOn": "The message was posted {{ date, relative }} (that is {{ date, ago }})."
+			},
+			"language": {
+				"en": "English",
+				"nl": "Marathi"
+			}
+		}
+	},
+	"nl": {
+		"translation": {
+			"welcome": "React, react-i18next आणि date-fns मध्ये आपले स्वागत आहे",
+			"selectLanguage": "भाषा निवडा:",
+			"dates": {
+				"fullDate": "तारीख आहे {{ date, short }}",
+				"localisedDate": "माझ्या भाषेत आपण तारीख असे लिहितो: {{ date, long }}",
+				"weekDay": "आज तो आहे{{ date, EEEE }}.",
+				"postedOn": "मेसेज टाकला होता{{ date, relative }} geplaatst (ते आहे {{ date, ago }})."
+			},
+			"language": {
+				"en": "English",
+				"nl": "Marathi"
+			}
+		}
+	}
+}

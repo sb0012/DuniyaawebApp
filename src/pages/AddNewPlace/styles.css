@@ -1,0 +1,12 @@
+.MuiButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  opacity: 0.5 !important;
+}
+
+.makeStyles-active-5{
+  background-image: radial-gradient(circle, rgb(127 12 134) 0%, rgb(127 12 134) 47%, rgba(38,243,50,1) 100%) !important;
+}
+
+.makeStyles-completed-6 {
+  background-image: linear-gradient(-145deg, rgb(127 12 134) 0%, rgb(246 236 247) 100%) !important;
+}

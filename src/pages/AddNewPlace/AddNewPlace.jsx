@@ -298,7 +298,7 @@ function AddNewPlace() {
                   <Form.Group className="mb-3" controlId="formBasicEmail">
 
                     <Row>
-                      <Col md="2"></Col>
+                      <Col md="3"></Col>
                       <Col md="8">
                         <Form.Label>Choose type of business / Place and Category</Form.Label>
                         <ul className='place_cat'>
@@ -492,7 +492,7 @@ function AddNewPlace() {
  <label htmlFor="size_1" className='d1 ms-2 '>Yes</label>
   
  <input type="radio" name="size" id="size_2" value="small" />
- <label htmlFor="size_2" className='d1 ms-5'>No</label>
+ <label htmlFor="size_2" className='d1 ms-3'>No</label>
  </div></FormGroup> 
                       <Row className="place_btn">
                         <Col md="6">
@@ -522,7 +522,7 @@ function AddNewPlace() {
                           Do you provide 24 * 7 Service {":"}
                         </Form.Label>
                         
-                        <Col sm={2} className="ms-4">
+                        <Col sm={2} >
                         <input type="radio" name="size" id="size_4" value="small"  />
  <label htmlFor="size_4" className='d1' onClick={()=>setShows(false)}>Yes</label>
                           {/* <Form.Check
@@ -535,7 +535,7 @@ function AddNewPlace() {
 
                           /> */}
                         </Col>
-                        <Col sm={2} style={{marginLeft:"100px"}}>
+                        <Col sm={2} style={{marginLeft:"20px"}}>
                         <input type="radio" name="size" id="size_3" value="small" checked  />
  <label htmlFor="size_3" className="d1" onClick={()=>{setShows(true)}} >No</label>
                           {/* <Form.Check
@@ -562,7 +562,7 @@ function AddNewPlace() {
                           Working Days {":"}
                         </Form.Label>
                         
-                        <Col sm={6}>
+                        <Col sm={7}>
                           <div className='days-btn'>
                             {/** <Button>S</Button>
                         <Button>M</Button>
@@ -631,7 +631,7 @@ function AddNewPlace() {
                           </Form.Select> */}
                           <Time/>
                         </Col>
-                        <Col sm={1} style={{marginTop:"40px"}}><p>to</p></Col>
+                        <Col sm={1} style={{marginTop:"28px"}}><p>to</p></Col>
                         <Col sm={3} className="mt-3">
                           {/* <Form.Select aria-label="Default select example" className="hours" name="working" value={formV.working}
               onChange={hanChange}>
@@ -678,7 +678,7 @@ function AddNewPlace() {
 
                         </Col> 
                         {lunchShow ?(
-                        <Col sm={1} style={{marginTop:"40px"}}><p>to</p></Col> ): ""}
+                        <Col sm={1} style={{marginTop:"28px"}}><p>to</p></Col> ): ""}
                        {lunchShow ?(  <Col sm={3} className="mt-3">
                           {/* <Form.Select aria-label="Default select example" className="hours" name="select" value={formV.select}
               onChange={hanChange}>
@@ -698,9 +698,10 @@ function AddNewPlace() {
                       
                         </Form.Label>
                         
-                        <Col sm={4} className="mt-4">
-                          <Form.Check type="checkbox" label="No Lunch Hours :" name="check" value={formV.check}
-              onChange={hanChange} onClick={()=> setLunchShow(!lunchShow)}/>
+                        <Col sm={6}>
+                          <Form.Check type="checkbox" name='check' value={formV.check}
+              onChange={hanChange} onClick={()=> setLunchShow(!lunchShow)} className="singleline"/>
+              <Form.Label className="singleline">No Lunch Hours</Form.Label>
               <p className="text-danger mt-3">{error.check}</p>
 
                         </Col>
@@ -711,7 +712,7 @@ function AddNewPlace() {
                           Do you provide exchange facility {":"}
                         </Form.Label>
                         
-                        <Col sm={2} className="ms-4">
+                        <Col sm={2} >
                         <input type="radio" name="rb" id="btn" value="YES" checked />
  <label htmlFor="btn" className='d1 ' onClick={()=>setExchange(true)}  >Yes</label>
                           {/* <Form.Check
@@ -723,7 +724,7 @@ function AddNewPlace() {
               onChange={hanChange}
                           /> */}
                         </Col>
-                        <Col sm={2} style={{marginLeft:"100px"}}>
+                        <Col sm={2} style={{marginLeft:"20px"}}>
                         <input type="radio" name="rb" id="btn1" value="No" />
  <label htmlFor="btn1" className='d1' onClick={()=>setExchange(false)}>No</label>
                           {/* <Form.Check
@@ -740,9 +741,9 @@ function AddNewPlace() {
                       </Form.Group>
                           {exchange?(
                       <Form.Group as={Row} className="mb-2">
-                        <Form.Label as="legend" column sm={4} className="mt-2">
+                       {exchangeAny?( <Form.Label as="legend" column sm={4} className="mt-2">
                           Exchange hour timing  {":"}
-                        </Form.Label>
+                        </Form.Label>):""}
                      
                         
                        {exchangeAny?( <Col sm={3}>
@@ -755,7 +756,7 @@ function AddNewPlace() {
                           <Time/>
 
                         </Col>):""}
-                       {exchangeAny?( <Col sm={1} style={{marginTop:"20px"}}><p>to</p></Col>):""}
+                       {exchangeAny?( <Col sm={1} style={{marginTop:"10px"}}><p>to</p></Col>):""}
                        {exchangeAny?( <Col sm={3}>
                           {/* <Form.Select aria-label="Default select example" className="hours" name="select" value={formV.select}
               onChange={hanChange}>
@@ -771,11 +772,12 @@ function AddNewPlace() {
                         <Form.Label as="legend" column sm={4}>
 
                         </Form.Label>
-                        :
+                      
                         <Col sm={6}>
 
-                          <Form.Check type="checkbox" label="Any time during working hours" name='check' value={formV.check}
-              onChange={hanChange} onClick={()=>setExchangeAny(!exchangeAny)}/>
+                          <Form.Check type="checkbox"  name='check' value={formV.check}
+              onChange={hanChange} onClick={()=>setExchangeAny(!exchangeAny)} className="single"/>
+              <Form.Label className="single">Any time during working hours</Form.Label>
               <p className="text-danger mt-3">{error.check}</p>
 
                         </Col>

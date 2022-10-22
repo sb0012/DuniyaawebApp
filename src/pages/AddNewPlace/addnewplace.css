@@ -36,7 +36,9 @@
     justify-content: center;
 }
 
-.days-btn{}
+.days-btn{
+   
+}
 
 /* .days-btn button{
     display: inline-block;
@@ -59,18 +61,23 @@
 .colors{
     margin: 4px;
     background-color: #7f0c86;
-    border-radius: 4px;
-    border: 1px solid #fce4c5;
+    border-radius: 8px;
+    border: 1px solid #7f0c86;
     overflow: hidden;
     float: left;
+    height: 30px;
+    width: 25px;
+   
+    
 }
 .cats{
     margin: 4px;
     background-color:white;
-    border-radius: 4px;
-    border: 1px solid #fce4c5;
+    border-radius: 8px;
+    border: 1px solid #7f0c86;
     overflow: hidden;
     float: left;
+    height: 30px;
 }
 
 .colors label {
@@ -397,4 +404,14 @@ input:checked + label {
 
 .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
     background-color: #7f0c86 !important;
+}
+
+.single{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.singleline{
+    display: inline-block;
+    margin-right: 10px;
 }

@@ -18,7 +18,7 @@ export default function Time()
         <Stack space={3} >  
           <MobileTimePicker
         
-            label="For mobile"  
+            label="set time"  
             value={value}  
             onChange={(newValue) => {  
               setValue(newValue);  

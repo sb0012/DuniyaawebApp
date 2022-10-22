@@ -375,7 +375,7 @@ color: white;
 }
 
 .css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
-    background-color: #7f0c86;
+    background-color: #7f0c86 !important;
 }
 
 .MuiGrid-root ,.MuiTypography-root {
@@ -393,4 +393,8 @@ color: white;
 input:checked + label { 
     color:white !important;
 
+}
+
+.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+    background-color: #7f0c86 !important;
 }

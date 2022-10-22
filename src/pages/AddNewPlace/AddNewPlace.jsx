@@ -173,10 +173,21 @@ function AddNewPlace() {
   const [lunchShow,setLunchShow]=useState(true)
   const [exchange,setExchange]=useState(true)
   const [exchangeAny,setExchangeAny]=useState(true)
+  const [service,setServices]=useState(false)
+  const [factory,setFactory]=useState(false)
+  const [self,setSelf]=useState(false)
+
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
 
+  const handleServiceShow = () => setServices(true);
+  const handleServiceClose = () => setServices(false);
 
+  const handleFactoryShow = () => setFactory(true);
+  const handleFactoryClose = () => setFactory(false);
+
+  const handleSelfShow = () => setSelf(true);
+  const handleSelfClose = () => setSelf(false);
   return (
     <div>
       <Header />
@@ -239,7 +250,7 @@ function AddNewPlace() {
                       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Shop / Office / Business / Place Address</Form.Label>
                         <Form.Control  as="textarea" rows={3} name="address" value={formValues.address}
-              onChange={handleChange}/>  
+              onChange={handleChange} disabled/>  
                         <Form.Text className="text-muted">
                           Make sure entered address is complete, correct and it is yoyr Shop/ Office / business location address.
                         </Form.Text>
@@ -293,7 +304,7 @@ function AddNewPlace() {
                         <ul className='place_cat'>
                           {/* <li><Button onClick={() => this.setState({ shown: !this.state.shown })}>Shop</Button></li> */}
                           <li>  <Button variant="primary" onClick={handleShow}> Shop</Button></li>
-                          <li><Button>Services</Button></li>
+                          <li><Button onClick={handleServiceShow}>Services</Button></li>
                           <li><Button>Factory & Manufacturing</Button></li>
                           <li><Button>Self Employment</Button></li>
                         </ul>
@@ -309,45 +320,122 @@ function AddNewPlace() {
                       <Form.Group controlId="formBasicPassword">
                         <Form.Label>More Details about place :</Form.Label>
                       </Form.Group>
+                      {/* Shop  */}
                       <Form.Group className="mb-3" controlId="formBasicPassword">
                         {show ? (
                          <Modal show={show} onHide={handleClose} style={{marginTop:"200px"}}>
                          <Modal.Header closeButton>
-                     
                          </Modal.Header>
                          <Modal.Body>
                          <Form.Select aria-label="Default select example">
                        <option>Open this select menu</option>
-                       <option value="1">One</option>
-                       <option value="2">Two</option>
-                       <option value="3">Three</option>
-                       <option value="4">One</option>
-                       <option value="5">Two</option>
-                       <option value="6">Three</option>
-                       <option value="7">One</option>
-                       <option value="8">Two</option>
-                       <option value="9">Three</option>
-                       <option value="10">One</option>
-                       <option value="11">Two</option>
-                       <option value="12">Three</option>
-                       
+                       <option value="1">Accessories and Repairies Shop</option>
+                       <option value="2">Aquarium Shop</option>
+                       <option value="3">Automobile Spareparts Shop</option>
+                       <option value="4">Bags Shop</option>
+                       <option value="5">Bakery Shop</option>
+                       <option value="6">Bangles and Novelty Shop</option>
+                       <option value="7">Banner and Graphics Shop</option>
+                       <option value="8">Beer Shop</option>
+                       <option value="9">Belt Shop</option>
+                       <option value="10">Bhaji Shop</option>
+                       <option value="11">Book Depo</option>
+                       <option value="12">Bicycle Shop</option>
                      </Form.Select>
                          </Modal.Body>
-                        
                        </Modal>
                         ) : ""}
-
                       </Form.Group>
+
+                          {/* Service */}
+                      <Form.Group className="mb-3" controlId="formBasicPassword">
+                        {service ? (
+                         <Modal show={service} onHide={handleServiceClose} style={{marginTop:"200px"}}>
+                         <Modal.Header closeButton>
+                         </Modal.Header>
+                         <Modal.Body>
+                         <Form.Select aria-label="Default select example">
+                       <option>Open this select menu</option>
+                       <option value="1">Accessories and Repairies Shop</option>
+                       <option value="2">Aquarium Shop</option>
+                       <option value="3">Automobile Spareparts Shop</option>
+                       <option value="4">Bags Shop</option>
+                       <option value="5">Bakery Shop</option>
+                       <option value="6">Bangles and Novelty Shop</option>
+                       <option value="7">Banner and Graphics Shop</option>
+                       <option value="8">Beer Shop</option>
+                       <option value="9">Belt Shop</option>
+                       <option value="10">Bhaji Shop</option>
+                       <option value="11">Book Depo</option>
+                       <option value="12">Bicycle Shop</option>
+                     </Form.Select>
+                         </Modal.Body>
+                       </Modal>
+                        ) : ""}
+                      </Form.Group>
+
+                      <Form.Group className="mb-3" controlId="formBasicPassword">
+                        {service ? (
+                         <Modal show={service} onHide={handleServiceClose} style={{marginTop:"200px"}}>
+                         <Modal.Header closeButton>
+                         </Modal.Header>
+                         <Modal.Body>
+                         <Form.Select aria-label="Default select example">
+                       <option>Open this select menu</option>
+                       <option value="1">Accessories and Repairies Shop</option>
+                       <option value="2">Aquarium Shop</option>
+                       <option value="3">Automobile Spareparts Shop</option>
+                       <option value="4">Bags Shop</option>
+                       <option value="5">Bakery Shop</option>
+                       <option value="6">Bangles and Novelty Shop</option>
+                       <option value="7">Banner and Graphics Shop</option>
+                       <option value="8">Beer Shop</option>
+                       <option value="9">Belt Shop</option>
+                       <option value="10">Bhaji Shop</option>
+                       <option value="11">Book Depo</option>
+                       <option value="12">Bicycle Shop</option>
+                     </Form.Select>
+                         </Modal.Body>
+                       </Modal>
+                        ) : ""}
+                      </Form.Group>
+
+                      <Form.Group className="mb-3" controlId="formBasicPassword">
+                        {service ? (
+                         <Modal show={service} onHide={handleServiceClose} style={{marginTop:"200px"}}>
+                         <Modal.Header closeButton>
+                         </Modal.Header>
+                         <Modal.Body>
+                         <Form.Select aria-label="Default select example">
+                       <option>Open this select menu</option>
+                       <option value="1">Accessories and Repairies Shop</option>
+                       <option value="2">Aquarium Shop</option>
+                       <option value="3">Automobile Spareparts Shop</option>
+                       <option value="4">Bags Shop</option>
+                       <option value="5">Bakery Shop</option>
+                       <option value="6">Bangles and Novelty Shop</option>
+                       <option value="7">Banner and Graphics Shop</option>
+                       <option value="8">Beer Shop</option>
+                       <option value="9">Belt Shop</option>
+                       <option value="10">Bhaji Shop</option>
+                       <option value="11">Book Depo</option>
+                       <option value="12">Bicycle Shop</option>
+                     </Form.Select>
+                         </Modal.Body>
+                       </Modal>
+                        ) : ""}
+                      </Form.Group>
+
                       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Describe your place / business in few words</Form.Label>
-                        <Form.Control as="textarea" rows={3} name="about" value={formValue.about}
+                        <Form.Control className="pt-5 pb-5"  as="textarea" rows="5" cols="40" name="about" aria-label="With textarea"  value={formValue.about}
               onChange={handleChanged}/>
                             <p className="text-danger">{formError.about}</p>
 
                       </Form.Group>
                       <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Mobile No.</Form.Label>
-                            <Form.Control type="number" placeholder="Mobile No." name="mobile" value={formValue.mobile}
+                            <Form.Control type="text" placeholder="Mobile No." name="mobile" value={formValue.mobile}
               onChange={handleChanged} />
                             <p className="text-danger">{formError.mobile}</p>
 

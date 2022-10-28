@@ -2,7 +2,7 @@ import React, { Component, useState,useEffect } from 'react';
 //import Carousel from 'react-elastic-carousel';
 // import img1 from "../../assets/images/img1.png";
 import "./addnewplace.css";
-import { Tabs, Tab, Container, Row, Col, Button, Form ,Modal} from "react-bootstrap";
+import { Tabs, Tab, Container, Row, Col, Button, Form ,Modal, Badge} from "react-bootstrap";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,11 +26,17 @@ function AddNewPlace() {
   const [formValue, setFormValue] = useState(businessValue);
   const [formError, setFormError] = useState({});
   const [isSubmited, setIsSubmited] = useState(false);
+  const [inputText, setInputText]=useState("")
+  const [characterLimit]=useState(500)
 
   const Value = {formHorizontalRadios:"",select:"",working:"",check:"",image:""};
   const [formV, setFormV] = useState(Value);
   const [error, setError] = useState({});
   const [submit, setSubmit] = useState(false);
+
+  const changeTextarea = event => {
+    setInputText(event.target.value);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -176,6 +182,11 @@ function AddNewPlace() {
   const [service,setServices]=useState(false)
   const [factory,setFactory]=useState(false)
   const [self,setSelf]=useState(false)
+  
+
+  const charactorChange=(event)=>{
+    setInputText(event.target.valur);
+  }
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
@@ -428,8 +439,9 @@ function AddNewPlace() {
 
                       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Describe your place / business in few words</Form.Label>
-                        <Form.Control className="pt-5 pb-5"  as="textarea" rows="5" cols="40" name="about" aria-label="With textarea"  value={formValue.about}
-              onChange={handleChanged}/>
+                        <Form.Control style={{paddingBottom:"80px"}}  as="textarea" rows={3}  name="about" aria-label="With textarea"  value={inputText} 
+              onChange={changeTextarea} isInvalid={(inputText.length > characterLimit)} />
+              <Badge className="mt-2 Textarea " style={{marginLeft:"480px"}}  bg={`${inputText.length > characterLimit ? "danger":"primary"}`}>{inputText.length}/{characterLimit}</Badge>
                             <p className="text-danger">{formError.about}</p>
 
                       </Form.Group>
@@ -487,13 +499,18 @@ function AddNewPlace() {
                         </Col>
                         <p className="text-danger">{formError.formHorizontalRadios}</p>
                       */}
-                      <div className="center-align"> 
-<input type="radio" name="size" id="size_1" value="small" checked />
+
+
+
+                       <div className="center-align"> 
+<input type="radio" name="size" id="size_1" />
  <label htmlFor="size_1" className='d1 ms-2 '>Yes</label>
   
- <input type="radio" name="size" id="size_2" value="small" />
+ <input type="radio" name="size" id="size_2"  />
  <label htmlFor="size_2" className='d1 ms-3'>No</label>
- </div></FormGroup> 
+ </div>
+ 
+ </FormGroup> 
                       <Row className="place_btn">
                         <Col md="6">
                           <Button variant="primary" onClick={Back}>
@@ -523,7 +540,7 @@ function AddNewPlace() {
                         </Form.Label>
                         
                         <Col sm={2} >
-                        <input type="radio" name="size" id="size_4" value="small"  />
+                        <input type="radio" name="provideservice" id="size_4" value="provideservice"  />
  <label htmlFor="size_4" className='d1' onClick={()=>setShows(false)}>Yes</label>
                           {/* <Form.Check
                             type="radio"
@@ -535,8 +552,8 @@ function AddNewPlace() {
 
                           /> */}
                         </Col>
-                        <Col sm={2} style={{marginLeft:"20px"}}>
-                        <input type="radio" name="size" id="size_3" value="small" checked  />
+                        <Col sm={2} style={{marginLeft:"-20px"}}>
+                        <input type="radio" name="provideservice" id="size_3" value="provideservice" />
  <label htmlFor="size_3" className="d1" onClick={()=>{setShows(true)}} >No</label>
                           {/* <Form.Check
                             type="radio"
@@ -713,7 +730,7 @@ function AddNewPlace() {
                         </Form.Label>
                         
                         <Col sm={2} >
-                        <input type="radio" name="rb" id="btn" value="YES" checked />
+                        <input type="radio" name="exchange" id="btn" value="exchange"  />
  <label htmlFor="btn" className='d1 ' onClick={()=>setExchange(true)}  >Yes</label>
                           {/* <Form.Check
                             type="radio"
@@ -724,8 +741,8 @@ function AddNewPlace() {
               onChange={hanChange}
                           /> */}
                         </Col>
-                        <Col sm={2} style={{marginLeft:"20px"}}>
-                        <input type="radio" name="rb" id="btn1" value="No" />
+                        <Col sm={2} style={{marginLeft:"-20px"}}>
+                        <input type="radio" name="exchange" id="btn1" value="exchange"  />
  <label htmlFor="btn1" className='d1' onClick={()=>setExchange(false)}>No</label>
                           {/* <Form.Check
                             type="radio"
@@ -773,14 +790,14 @@ function AddNewPlace() {
 
                         </Form.Label>
                       
-                        <Col sm={6}>
+                      {exchange ?(    <Col sm={6}>
 
-                          <Form.Check type="checkbox"  name='check' value={formV.check}
+                           <Form.Check type="checkbox"  name='check' value={formV.check}
               onChange={hanChange} onClick={()=>setExchangeAny(!exchangeAny)} className="single"/>
-              <Form.Label className="single">Any time during working hours</Form.Label>
+           <Form.Label className="single">Any time during working hours</Form.Label>
               <p className="text-danger mt-3">{error.check}</p>
 
-                        </Col>
+                        </Col>):" "}
 
                       </Form.Group>
                       <Row className="place_btn">

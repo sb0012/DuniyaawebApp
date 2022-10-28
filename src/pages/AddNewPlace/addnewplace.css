@@ -263,8 +263,13 @@ input[type="radio"]{
   }
 
 input[type="radio"]:checked +.d1{
-    background-color: #7f0c86;
+    background-color: #7f0c86 !important;
   }
+
+  /* Radio Button css */
+
+
+  /* Radio Button css Complete */
 
    .heading{
     text-align: center;
@@ -414,4 +419,9 @@ input:checked + label {
 .singleline{
     display: inline-block;
     margin-right: 10px;
+}
+
+.Textarea{
+    background: none !important;
+    color: black;
 }

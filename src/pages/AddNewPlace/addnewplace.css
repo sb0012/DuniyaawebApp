@@ -59,25 +59,32 @@
 /************* working days btn style start *************/
 
 .colors{
-    margin: 4px;
+    margin-left: 10px;
+    margin-top: -4px;
     background-color: #7f0c86;
-    border-radius: 8px;
+    border-radius: 14px;
     border: 1px solid #7f0c86;
     overflow: hidden;
     float: left;
-    height: 30px;
-    width: 25px;
+    height: 45px;
+    width: 35px;
+   
+   
    
     
 }
 .cats{
-    margin: 4px;
+   
+    margin-top: -4px;
     background-color:white;
-    border-radius: 8px;
+    border-radius: 14px;
     border: 1px solid #7f0c86;
     overflow: hidden;
     float: left;
-    height: 30px;
+    height: 45px;
+    width: 35px; 
+  
+    /* text-align: center; */
 }
 
 .colors label {
@@ -97,24 +104,25 @@
   
   }
   .colors label span {
-    text-align: center;
-    padding: 3px 0;
+    /* text-align: center; */
+    /* padding: 8px ; */
     display: block;
-    font-size: 11px;
+    font-size: 20px;
     font-weight: 600;
     
   }
   .cats label span{
-text-align: center;
-padding: 3px 0;
+/* text-align: center !important; */
+padding-left: 8px ;
 display: block;
-font-size: 11px;
+font-size: 25px;
     font-weight: 600;
   }
 
   .colors label input {
     position: absolute;
     display: none;
+    text-align: center;
     
   }
 
@@ -124,18 +132,30 @@ font-size: 11px;
     
   }
   /* selects all of the text within the input element and changes the color of the text */
-  .colors label input + span{color: rgb(248, 244, 244);}
-  .cats label input + span{color: rgb(0, 0, 0);}
+  .colors label input + span{color: rgb(255, 255, 255); padding-top: 12px;font-size: 23px;  }
+  .cats label input + span{color: rgb(0, 0, 0); padding-top: 12px;font-size: 23px;}
   
   
   /* This will declare how a selected input will look giving generic properties */
   .colors input:checked + span {
     color: rgb(0, 0, 0);
-    font-size: 15px;
+    font-size: 23px;
+    width: 35px;
+    height: 45px;
+    /* text-align: center; */
+    padding-top: 12px;
+    
+    
+
 }
 .cats input:checked + span {
     color: rgb(255, 255, 255);
-    font-size: 15px;
+    font-size: 23px;
+    width: 35px;
+    height: 45px;
+    /* text-align:center; */
+    padding-top: 12px;
+     
 }
   
   
@@ -266,10 +286,7 @@ input[type="radio"]:checked +.d1{
     background-color: #7f0c86 !important;
   }
 
-  /* Radio Button css */
-
-
-  /* Radio Button css Complete */
+ 
 
    .heading{
     text-align: center;
@@ -421,7 +438,40 @@ input:checked + label {
     margin-right: 10px;
 }
 
+/* business page textarea css */
 .Textarea{
     background: none !important;
     color: black;
+}
+/* Add new place link css */
+.nav-link.active {
+    color: #7f0c86 !important;
+}
+/* business page button css */
+.btn:first-child:hover, :not(.btn-check)+.btn:hover {
+    border-color: #7f0c86 !important;
+    background-color: #7f0c86 !important;
+}
+
+/* Location css */
+.location{
+    color:#7f0c86;
+    cursor: pointer;
+}
+
+/* Check Box Css */
+.form-check-input:checked {
+    background-color: #7f0c86;
+    border-color: #7f0c86;
+    
+}
+
+/* Check Box Border Css */
+.form-check-input:focus {
+    border-color: #7f0c86;
+    outline:#7f0c86;
+    box-shadow: 0 0 0 0.25rem rgba(207, 109, 207, 0.25);
+}
+.form-check-input {
+    border:1px solid #7f0c86 !important;
 }

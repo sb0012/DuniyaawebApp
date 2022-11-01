@@ -108,7 +108,7 @@
     /* padding: 8px ; */
     display: block;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     
   }
   .cats label span{
@@ -116,7 +116,7 @@
 padding-left: 8px ;
 display: block;
 font-size: 25px;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .colors label input {
@@ -132,8 +132,8 @@ font-size: 25px;
     
   }
   /* selects all of the text within the input element and changes the color of the text */
-  .colors label input + span{color: rgb(255, 255, 255); padding-top: 12px;font-size: 23px;  }
-  .cats label input + span{color: rgb(0, 0, 0); padding-top: 12px;font-size: 23px;}
+  .colors label input + span{color: rgb(255, 255, 255); padding-top: 12px;font-size: 23px; font-family:Arial, Helvetica, sans-serif;  }
+  .cats label input + span{color: rgb(0, 0, 0); padding-top: 12px;font-size: 23px; font-family:Arial, Helvetica, sans-serif;}
   
   
   /* This will declare how a selected input will look giving generic properties */
@@ -475,3 +475,4 @@ input:checked + label {
 .form-check-input {
     border:1px solid #7f0c86 !important;
 }
+

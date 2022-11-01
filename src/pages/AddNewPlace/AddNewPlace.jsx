@@ -11,7 +11,11 @@ import Popup from './Popup';
 import { useNavigate } from 'react-router-dom';
 import { FormGroup, Input, Label } from 'reactstrap';
 import Time from './Time';
+
 import Date from './Date';
+import ClosingTime from './ClosingTime';
+import StartTime from './StartTime';
+import EndTime from './EndTime';
 
 // import Modal from 'react-bootstrap/Modal';
 
@@ -580,7 +584,7 @@ function AddNewPlace() {
                           <Form.Label as="legend" column sm={4}>
                             Working Days :
                           </Form.Label>
-                        
+                      
                           <Col sm={7}>
                             <div className='days-btn'>
                               {/** <Button>S</Button>
@@ -592,37 +596,37 @@ function AddNewPlace() {
                         <Button>S</Button>**/}
                               <div className="cats action">
                                 <label>
-                                  <input type="checkbox" value="1" name="select" /><span style={{ paddingLeft: "9px" }} >S</span>
+                                  <input type="checkbox" value="1" name="select" /><span style={{ paddingLeft: "10px" }} >S</span>
                                 </label>
                               </div>
 
                               <div className="colors comedy ">
                                 <label>
-                                  <input type="checkbox" value="1" name="select" /><span style={{ paddingLeft: "5px" }} >M</span>
+                                  <input type="checkbox" value="1" name="select" /><span style={{ paddingLeft: "7px" }} >M</span>
                                 </label>
                               </div>
 
                               <div className="colors crime">
                                 <label>
-                                  <input type="checkbox" value="1" name="select" /><span style={{ paddingLeft: "9px" }}>T</span>
+                                  <input type="checkbox" value="1" name="select" /><span style={{ paddingLeft: "10px" }}>T</span>
                                 </label>
                               </div>
 
                               <div className="colors history">
                                 <label>
-                                  <input type="checkbox" value="1" name="select" /><span style={{ paddingLeft: "4px" }}>W</span>
+                                  <input type="checkbox" value="1" name="select" /><span style={{ paddingLeft: "6px" }}>W</span>
                                 </label>
                               </div>
 
                               <div className="colors reality">
                                 <label>
-                                  <input type="checkbox" value="1" name="select" /><span style={{ paddingLeft: "9px" }}>T</span>
+                                  <input type="checkbox" value="1" name="select" /><span style={{ paddingLeft: "10px" }}>T</span>
                                 </label>
                               </div>
 
                               <div className="colors news">
                                 <label>
-                                  <input type="checkbox" value="1" name="select" /><span style={{ paddingLeft: "9px" }}>F</span>
+                                  <input type="checkbox" value="1" name="select" /><span style={{ paddingLeft: "10px" }}>F</span>
                                 </label>
                               </div>
 
@@ -659,7 +663,7 @@ function AddNewPlace() {
                             <option value="3">3</option>
                           </Form.Select>
                           <p className="text-danger mt-3">{error.working}</p> */}
-                            <Time />
+                            <ClosingTime/>
 
                           </Col>
                         </Form.Group>) : ""}
@@ -692,7 +696,7 @@ function AddNewPlace() {
                               //               <option value="2">2</option>
                               //               <option value="3">3</option>
                               //             </Form.Select>
-                              <Time />
+                              <StartTime/>
                             ) : ""}
 
                           </Col>
@@ -706,7 +710,7 @@ function AddNewPlace() {
                             <option value="3">3</option>
                           </Form.Select>
                           <p className="text-danger mt-3">{error.select}</p> */}
-                            <Time />
+                            <EndTime/>
 
                           </Col>) : ""}
 
@@ -772,7 +776,7 @@ function AddNewPlace() {
                             <option value="2">2</option>
                             <option value="3">3</option>
                           </Form.Select> */}
-                            <Time />
+                            <StartTime />
 
                           </Col>) : ""}
                           {exchangeAny ? (<Col sm={1} style={{ marginTop: "10px" }}><p>to</p></Col>) : ""}
@@ -784,7 +788,7 @@ function AddNewPlace() {
                             <option value="3">3</option>
                           </Form.Select> */}
                             {/* <p className="text-danger mt-3">{error.select}</p> */}
-                            <Time />
+                            <EndTime />
                           </Col>) : ""}
                         </Form.Group>) : ""}
                       <Form.Group as={Row} className="mb-2">

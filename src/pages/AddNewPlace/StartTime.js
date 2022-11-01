@@ -7,7 +7,7 @@ import "./addnewplace.css";
  
 import { MobileTimePicker } from '@mui/x-date-pickers/MobileTimePicker';  
  
-export default function Time()   
+export default function StartTime()   
 {  
  const newDate= new Date()
 // const newDate=new Date().toTimeString('2018-01-01T00:00:00.000Z')
@@ -18,7 +18,7 @@ export default function Time()
         <Stack space={3} >  
           <MobileTimePicker
         
-            label="Opening Time"  
+            label="Start Time"  
             value={value}  
             onChange={(newValue) => {  
               setValue(newValue);  

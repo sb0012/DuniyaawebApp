@@ -46,7 +46,6 @@
     font-weight: 600;
 }
 
-
 .recommanded_place h5 i{
     float: right;
 }
@@ -125,6 +124,18 @@
     border-radius: 3px;
 }
 .add_place_div1{
+    background: #7f0c86;
+    border: none;
+    padding: 10px 50px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff !important;
+    line-height: 34px;
+    border-radius: 3px;
+}
+
+.add_place_div3 {
     background: #7f0c86;
     border: none;
     padding: 10px 50px;
@@ -234,3 +245,64 @@
     font-size: 13px;
     color: #7f0c86;
 }
+
+/* AddPeopleWhoNeedHelp css */
+
+input[type="radio"]{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  
+  .helpinghands {
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dcd9d9;
+    padding: 5px 20px;
+    border-radius: 20px;
+  }
+  .helpinghands:visited{
+    color: white;
+  }
+
+input[type="radio"]:checked +.helpinghands{
+    background-color: #7f0c86 !important;
+    color: white !important;
+  }
+
+  .modal-content{
+    border-radius: 1rem !important;
+  }
+
+/* helping hand Add post button on focus and check button */
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    background-color: #7f0c86;
+}
+
+
+  .HelpingHandDivid{
+    
+        position: relative ;
+        display: flex ;
+        flex-direction: column ;
+     
+        width: 1000px ;
+        pointer-events: auto ;
+        background-color: #fff ;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: .3rem ;
+        outline: 0 ;
+        margin-right: -200px ;
+        margin-left: -200px ;
+      
+  }
+
+  .radiobuttonborder{
+    border-right:  1px solid rgb(214, 210, 210);
+  }
+  .fontWeight{
+    font-size: 20px;
+    
+  }

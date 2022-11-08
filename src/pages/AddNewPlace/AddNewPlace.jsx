@@ -226,11 +226,7 @@ function AddNewPlace() {
           </Container>
         </div>
 
-
         <Container>
-
-
-
           <div className='add_place_tab'>
             <Tabs activeKey={key} onSelect={(k) => setKey(k)}
               id="uncontrolled-tab-example" className="mb-3 tab_class">
@@ -320,7 +316,7 @@ function AddNewPlace() {
                         <Form.Label>Choose type of business / Place and Category</Form.Label>
                         <ul className='place_cat'>
                           {/* <li><Button onClick={() => this.setState({ shown: !this.state.shown })}>Shop</Button></li> */}
-                          <li>  <Button variant="primary" onClick={handleShow}> Shop</Button></li>
+                          <li>  <Button  onClick={handleShow}> Shop</Button></li>
                           <li><Button onClick={handleServiceShow}>Services</Button></li>
                           <li><Button>Factory & Manufacturing</Button></li>
                           <li><Button>Self Employment</Button></li>

@@ -83,8 +83,8 @@ export default function Header() {
 
                   {/* <Nav.Link href="#deets">Contact</Nav.Link>*/}
                   
-                  {/* <Nav.Link className={splitLocation[1] === "MyPlaces" ? "active" : ""} href="/MyPlaces">My Places</Nav.Link> */}
-                  {/* <Nav.Link className={splitLocation[1] === "Stepper" ? "active" : ""} href="/Stepper">Stepper</Nav.Link> */}
+                  <Nav.Link className={splitLocation[1] === "MyPlaces" ? "active" : ""} href="/MyPlaces">My Places</Nav.Link>
+                  <Nav.Link className={splitLocation[1] === "Stepper" ? "active" : ""} href="/Stepper">Stepper</Nav.Link>
                   <Nav.Link className={splitLocation[1] === "Login" ? "active" : ""} eventKey={2} href="/Login"><span className='me-4'>Login</span></Nav.Link>
                     {/* <Nav.Link href="/VoiceSearchBar"><span className='mdlogo'><FaMicrophone /></span></Nav.Link> */}
                     {/* nitification div */}
@@ -96,11 +96,11 @@ export default function Header() {
                   </div></Nav.Link>
                   <Nav.Link><div id="google_translate_element" className='google'></div></Nav.Link>
 
-                  { /** <Nav.Link href="/Procedure" className='help_icon'><i className='fa fa-question-circle'></i></Nav.Link>
-                  <Nav.Link href="/PublicPlaceProcedure" className='help_icon'>Public Place Help</Nav.Link>
-                  <Nav.Link className={splitLocation[1] === "Language" ? "active" : ""} eventKey={2} href="/Language">
+                  <Nav.Link href="/Procedure" className='help_icon'><i className='fa fa-question-circle'></i></Nav.Link>
+                  {/* <Nav.Link href="/PublicPlaceProcedure" className='help_icon'>Public Place Help</Nav.Link> */}
+                  {/* <Nav.Link className={splitLocation[1] === "Language" ? "active" : ""} eventKey={2} href="/Language">
                   Language
-                  </Nav.Link>**/}
+                  </Nav.Link> */}
 
                 </Nav>
               </Navbar.Collapse>

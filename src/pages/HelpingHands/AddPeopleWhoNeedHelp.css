@@ -1,0 +1,22 @@
+input[type="radio"]{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  
+  .d1 {
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dcd9d9;
+    padding: 5px 20px;
+    border-radius: 20px;
+  }
+  .d1:visited{
+    color: white;
+  }
+
+input[type="radio"]:checked +.d1{
+    background-color: #7f0c86 !important;
+    color: white !important;
+  }

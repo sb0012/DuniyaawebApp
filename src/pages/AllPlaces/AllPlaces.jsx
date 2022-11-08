@@ -11,11 +11,25 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import HelpingHandPost from "../../components/HelpingHandPost.jsx";
 import Post from "../../components/Post.jsx";
+import Location from '../../components/Location';
 
 import Newplaces from "../../components/Newplaces";
+// import AddPeopleWhoNeedHelp from '../HelpingHands/AddPeopleWhoNewwdHelp';
+import Modal from 'react-bootstrap/Modal';
 
 
 export default function AllPlaces() {
+
+    const [show,setShow]=useState(false)
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const[location,setLocation]=useState(false)
+
+    const locationShow=()=>{
+        setLocation(true)
+    }
   
   return (
   <div>
@@ -141,7 +155,7 @@ export default function AllPlaces() {
                             </Col>
                             <Col md="4 mt-3">
                              {/*Add post*/}
-                                 <Button className="add_place_div"><i className="fa fa-plus"></i> Add Post</Button>
+                                 <Button className="add_place_div1"><i className="fa fa-plus"></i> Add Post</Button>
                             </Col>
                          </Row>
                          
@@ -174,12 +188,193 @@ export default function AllPlaces() {
                             </Col>
                             <Col md="4 mt-3">
                              {/*Add post*/}
-                                 <Button className="add_place_div"><i className="fa fa-plus"></i> Add Post</Button>
+                                 <Button className="add_place_div3" onClick={handleShow}><i className="fa fa-plus"></i> Add Post</Button>
+                                
                             </Col>
                          </Row>
+
+                        {/*Add People Who Need Help */}
+                         <Row>
+                         <Col sm={3}></Col>
+                         <Col sm={6} className="modal">
+                         {show ? (
+                            <Modal  show={show} onHide={handleClose}>
+                            <Container className="HelpingHandDivid">
+                <Modal.Header closeButton>
+
+                    <Modal.Title >Add people who need help</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Container>
+
+                        <Form >
+                        <Row>
+                        <Col sm={6} className="radiobuttonborder">
+                       
+                            {/* Category */}
+                            <Form.Group>
+                                <div className="center-align">
+                                    <div className="row">
+                                        <div className="col-md-12 mb-3">
+                                            <label htmlFor="">Category</label>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+
+                                        <div className="col-md-12">
+                                            <input type="radio" name="category" id="category1" />
+                                            <label htmlFor="category1" className='helpinghands  '>Food</label>
+
+                                            <input type="radio" name="category" id="category2" />
+                                            <label htmlFor="category2" className='helpinghands ms-3'>Medical Help</label>
+
+
+                                            <input type="radio" name="category" id="category3" />
+                                            <label htmlFor="category3" className='helpinghands ms-3'>Wearing Cloths</label>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </Form.Group>
+
+                            {/* Number of people */}
+                            <Form.Group>
+                                <div className="center-align">
+                                    <div className="row">
+                                        <div className="col-md-12 my-2">
+                                            <label htmlFor="">Number of people</label>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+
+                                        <div className="col-md-12">
+                                            <input type="radio" name="people1" id="people1" />
+                                            <label htmlFor="people1" className='helpinghands '>1</label>
+
+                                            <input type="radio" name="people1" id="people2" />
+                                            <label htmlFor="people2" className='helpinghands ms-3'>2-5</label>
+
+
+                                            <input type="radio" name="people1" id="people3" />
+                                            <label htmlFor="people3" className='helpinghands ms-3'>6-10</label>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </Form.Group>
+
+                            {/* Priority */}
+                            <Form.Group>
+                                <div className="center-align">
+                                    <div className="row">
+                                        <div className="col-md-12 my-2">
+                                            <label htmlFor="">Priority</label>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+
+                                        <div className="col-md-12">
+                                            <input type="radio" name="priority1" id="priority1" />
+                                            <label htmlFor="priority1" className='helpinghands  '>Immediate</label>
+
+                                            <input type="radio" name="priority1" id="priority2" />
+                                            <label htmlFor="priority2" className='helpinghands ms-3'>Urgent</label>
+
+                                            <input type="radio" name="priority1" id="priority3" />
+                                            <label htmlFor="priority3" className='helpinghands ms-3'>Normal</label>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </Form.Group>
+
+                            {/* Post expiry */}
+                            <Form.Group>
+                                <div className="center-align">
+                                    <div className="row">
+                                        <div className="col-md-12 my-2">
+                                            <label htmlFor="">Post expiry</label>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+
+                                        <div className="col-md-12">
+                                            <input type="radio" name="expiry1" id="expiry1" />
+                                            <label htmlFor="expiry1" className='helpinghands  '>1d</label>
+
+                                            <input type="radio" name="expiry1" id="expiry2" />
+                                            <label htmlFor="expiry2" className='helpinghands ms-3'>6hrs</label>
+
+
+                                            <input type="radio" name="expiry1" id="expiry3" />
+                                            <label htmlFor="expiry3" className='helpinghands ms-3'>1w</label>
+
+                                            <input type="radio" name="expiry1" id="expiry4" />
+                                            <label htmlFor="expiry4" className='helpinghands ms-3'>3hrs</label>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                </Form.Group>
+                                </Col>
+                                
+                                <Col sm={6}>
+
+                            <Form.Group className="mt-3" controlId="exampleForm.ControlInput1">
+                            
+                            <Form.Label onClick={locationShow} style={{cursor:"pointer", color:"#7f0c86"}} className="fontWeight" >Address</Form.Label>
+                            
+                            {location?(<div className="card ">
+                                <Location/>
+                            </div>):( <div className="card " style={{padding:"40px"}}>
+                                
+                            </div>)}
+                            </Form.Group>
+
+                            <Form.Text id="passwordHelpBlock" muted>
+                               Make sure entered address is complete,correct and it is your Shop/Office
+                            </Form.Text>
+
+                            <Form.Group className="mt-2" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Landmark</Form.Label>
+                                <Form.Control type="text" placeholder="Landmark" />
+                            </Form.Group>
+
+                            <Form.Group className="mt-2" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Add Image</Form.Label>
+                            <Form.Control type="file" placeholder="Landmark" />
+                        </Form.Group>
+
+                        <Form.Group className="mt-2" controlId="exampleForm.ControlInput1">
+                        <Form.Label>Add Message</Form.Label>
+                        <Form.Control as="textarea" placeholder="Landmark" />
+                    </Form.Group>
+                    </Col>
+                    </Row>
+
+
+
+                        </Form>
+
+
+                    </Container>
+                </Modal.Body>
+                </Container>
+               
+            </Modal>
+                         ):""}
+                         </Col>
+                         </Row>
+
                          
                     </div>
-                    
                     </Row>
                        <HelpingHandPost />
                     </Tab.Pane>

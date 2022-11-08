@@ -279,7 +279,7 @@ input[type="radio"]{
     border-radius: 3px;
   }
   .d1:visited{
-    color: white;
+    color: rgb(255, 255, 255);
   }
 
 input[type="radio"]:checked +.d1{
@@ -444,9 +444,11 @@ input:checked + label {
     color: black;
 }
 /* Add new place link css */
-.nav-link.active {
+
+/* .nav-link.active {
     color: #7f0c86 !important;
-}
+} */
+
 /* business page button css */
 .btn:first-child:hover, :not(.btn-check)+.btn:hover {
     border-color: #7f0c86 !important;

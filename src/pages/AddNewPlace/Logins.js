@@ -22,23 +22,23 @@ const Logins = () => {
 
   return (
       <div>
-      {showloginbutton ?
+      {showloginbutton ?(
     <GoogleLogin
     clientId={clientId}
     buttonText="Login"
     onSuccess={onLoginSuccess}
     onFailure={onFailureSuccess}
     cookiePolicy={'single_host_origin'}
-  /> : null
+  />) : null
       }
-      {showlogoutbutton ?
+      {showlogoutbutton ?(
 
     <GoogleLogout
       clientId={clientId}
       buttonText="Logout"
       onLogoutSuccess={onSignoutSuccess}
     >
-    </GoogleLogout> : null
+    </GoogleLogout>) : null
       }
       
     </div>

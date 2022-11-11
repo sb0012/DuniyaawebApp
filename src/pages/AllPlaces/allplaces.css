@@ -269,6 +269,7 @@ input[type="radio"] + .helpinghands {
   position: relative;
   padding: 5px 24px;
   border-radius: 10px;
+  font-weight: normal;
 }
 
 .helpinghands:visited {
@@ -326,7 +327,8 @@ input[type="radio"]:checked + .helpinghands::before {
   border-right: 1px solid rgb(214, 210, 210);
 }
 .fontWeight {
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .textCenter {
@@ -340,4 +342,8 @@ input[type="radio"]:checked + .helpinghands::before {
   margin: auto;
   color: white;
   background-color: #7f0c86;
+}
+
+.btnName label{
+  color: black !important;
 }

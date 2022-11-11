@@ -213,8 +213,8 @@ export default function AllPlaces() {
                                                                                             <Col sm={6} className="radiobuttonborder">
 
                                                                                                 {/* Category */}
-                                                                                                <Form.Group>
-                                                                                                    <div className="center-align">
+                                                                                                <Form.Group className='fw-bold'>
+                                                                                                    <div className="center-align ">
                                                                                                         <div className="row mb-4">
                                                                                                             <div className="col-md-12 ">
                                                                                                                 <label htmlFor="" >Category</label>
@@ -241,7 +241,7 @@ export default function AllPlaces() {
                                                                                                 </Form.Group>
 
                                                                                                 {/* Number of people */}
-                                                                                                <Form.Group>
+                                                                                                <Form.Group className='fw-bold'>
                                                                                                     <div className="center-align">
                                                                                                         <div className="row">
                                                                                                             <div className="col-md-12 my-2">
@@ -269,7 +269,7 @@ export default function AllPlaces() {
                                                                                                 </Form.Group>
 
                                                                                                 {/* Priority */}
-                                                                                                <Form.Group>
+                                                                                                <Form.Group className='fw-bold'>
                                                                                                     <div className="center-align">
                                                                                                         <div className="row text-dark ">
                                                                                                             <div className="col-md-12 my-2  ">
@@ -296,7 +296,7 @@ export default function AllPlaces() {
                                                                                                 </Form.Group>
 
                                                                                                 {/* Post expiry */}
-                                                                                                <Form.Group>
+                                                                                                <Form.Group className='text-dark fw-bold'>
                                                                                                     <div className="center-align">
                                                                                                         <div className="row">
                                                                                                             <div className="col-md-12 my-2">
@@ -330,7 +330,7 @@ export default function AllPlaces() {
 
                                                                                                 <Form.Group className="mt-3" controlId="exampleForm.ControlInput1">
 
-                                                                                                    <Form.Label onClick={locationShow} style={{ cursor: "pointer", color: "#7f0c86" }} className="fontWeight" ><MdLocationPin style={{fontSize:"35px"}}/> Fetch Location </Form.Label>
+                                                                                                    <Form.Label onClick={locationShow} style={{ cursor: "pointer", color: "#7f0c86" }} className="fontWeight" ><MdLocationPin style={{fontSize:"20px"}}/> Fetch Location </Form.Label>
 
                                                                                                     {location ? (<div className="card ">
                                                                                                         <Location />
@@ -343,19 +343,19 @@ export default function AllPlaces() {
                                                                                                     Make sure entered address is complete,correct and it is your Shop/Office
                                                                                                 </Form.Text>
 
-                                                                                                <Form.Group className="mt-2" controlId="exampleForm.ControlInput1">
-                                                                                                    <Form.Label>Landmark</Form.Label>
+                                                                                                <Form.Group className="mt-2 " controlId="exampleForm.ControlInput1">
+                                                                                                    <Form.Label className="fontWeight">Landmark</Form.Label>
                                                                                                     <Form.Control type="text" placeholder="Landmark" />
                                                                                                 </Form.Group>
 
-                                                                                                <Form.Group className="mt-2" controlId="exampleForm.ControlInput1">
-                                                                                                    <Form.Label>Add Image</Form.Label>
+                                                                                                <Form.Group className="mt-2  " controlId="exampleForm.ControlInput1">
+                                                                                                    <Form.Label className="fontWeight">Add Image</Form.Label>
                                                                                                     <Form.Control type="file" placeholder="Landmark" />
                                                                                                 </Form.Group>
 
-                                                                                                <Form.Group className="mt-2" controlId="exampleForm.ControlInput1">
-                                                                                                    <Form.Label>Add Message</Form.Label>
-                                                                                                    <Form.Control as="textarea" placeholder="Leave a comment here" style={{ height: '80px' }}
+                                                                                                <Form.Group className="mt-2 " controlId="exampleForm.ControlInput1">
+                                                                                                    <Form.Label className="fontWeight">Add Message</Form.Label>
+                                                                                                    <Form.Control as="textarea" placeholder="Enter Here" style={{ height: '80px' }}
                                                                                                     />
                                                                                                 </Form.Group>
                                                                                             </Col>
@@ -369,11 +369,11 @@ export default function AllPlaces() {
                                                                                             <Col sm={2}>
                                                                                                 <button type="reset" class="addbtn">Reset</button>
                                                                                             </Col>
-{/* 
+
                                                                                             <Col sm={2}>
                                                                                                 <button type="button" class="addbtn">Cancel</button>
                                                                                             </Col>
-                                                                                            <Col sm={3}></Col>  */}
+                                                                                            <Col sm={3}></Col> 
                                                                                         </Row>
 
 

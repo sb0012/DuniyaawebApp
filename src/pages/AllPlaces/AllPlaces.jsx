@@ -369,11 +369,11 @@ export default function AllPlaces() {
                                                                                             <Col sm={2}>
                                                                                                 <button type="reset" class="addbtn">Reset</button>
                                                                                             </Col>
-{/* 
+
                                                                                             <Col sm={2}>
                                                                                                 <button type="button" class="addbtn">Cancel</button>
                                                                                             </Col>
-                                                                                            <Col sm={3}></Col> */}
+                                                                                            <Col sm={3}></Col> 
                                                                                         </Row>
 
 

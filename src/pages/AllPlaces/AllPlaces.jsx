@@ -271,8 +271,8 @@ export default function AllPlaces() {
                                                                                                 {/* Priority */}
                                                                                                 <Form.Group>
                                                                                                     <div className="center-align">
-                                                                                                        <div className="row">
-                                                                                                            <div className="col-md-12 my-2">
+                                                                                                        <div className="row text-dark ">
+                                                                                                            <div className="col-md-12 my-2  ">
                                                                                                                 <label htmlFor="">Priority</label>
                                                                                                             </div>
                                                                                                         </div>
@@ -369,11 +369,11 @@ export default function AllPlaces() {
                                                                                             <Col sm={2}>
                                                                                                 <button type="reset" class="addbtn">Reset</button>
                                                                                             </Col>
-
+{/* 
                                                                                             <Col sm={2}>
                                                                                                 <button type="button" class="addbtn">Cancel</button>
                                                                                             </Col>
-                                                                                            <Col sm={3}></Col>
+                                                                                            <Col sm={3}></Col> */}
                                                                                         </Row>
 
 

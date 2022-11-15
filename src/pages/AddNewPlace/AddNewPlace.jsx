@@ -7,6 +7,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Location from '../../components/Location';
+import ReverseGeoLocation from '../../components/ReverseGeoLocation';
 import Popup from './Popup';
 import { useNavigate } from 'react-router-dom';
 import { FormGroup, Input, Label } from 'reactstrap';
@@ -281,13 +282,13 @@ function AddNewPlace() {
                       <div className=''> <Form.Label className="location" onClick={() => setShowLocation(!showLocation)}><i className="fa fa-map-marker"></i> Fetch current location</Form.Label>
                         <div className="card">
                           {showLocation ? (<div className="card-header">
-                            <Location />
-                          </div>) : (<Location />)}
+                            <ReverseGeoLocation />
+                          </div>) : (<ReverseGeoLocation />)}
                         </div>
                       </div>
                       <Row className="place_btn">
                         <Col md="6">
-                          <Button variant="primary" className="opacity_class" desebled >
+                          <Button variant="primary" className="opacity_class"  disabled >
                             <i className='fa fa-angle-left' /> Prevoius
                           </Button>
                         </Col>

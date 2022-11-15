@@ -17,6 +17,7 @@ import Location from '../../components/Location';
 import Newplaces from "../../components/Newplaces";
 // import AddPeopleWhoNeedHelp from '../HelpingHands/AddPeopleWhoNewwdHelp';
 import Modal from 'react-bootstrap/Modal';
+import ReverseGeoLocation from '../../components/ReverseGeoLocation';
 
 
 export default function AllPlaces() {
@@ -333,7 +334,7 @@ export default function AllPlaces() {
                                                                                                     <Form.Label onClick={locationShow} style={{ cursor: "pointer", color: "#7f0c86" }} className="fontWeight" ><MdLocationPin style={{fontSize:"20px"}}/> Fetch Location </Form.Label>
 
                                                                                                     {location ? (<div className="card ">
-                                                                                                        <Location />
+                                                                                                        <ReverseGeoLocation/>
                                                                                                     </div>) : (<div className="card " style={{ padding: "40px" }}>
 
                                                                                                     </div>)}

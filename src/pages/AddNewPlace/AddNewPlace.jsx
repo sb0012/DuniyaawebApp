@@ -6,9 +6,9 @@ import { Tabs, Tab, Container, Row, Col, Button, Form, Modal, Badge } from "reac
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Location from '../../components/Location';
+// import Location from '../../components/Location';
 import ReverseGeoLocation from '../../components/ReverseGeoLocation';
-import Popup from './Popup';
+// import Popup from './Popup';
 import { useNavigate } from 'react-router-dom';
 import { FormGroup, Input, Label } from 'reactstrap';
 import Time from './Time';
@@ -192,7 +192,7 @@ function AddNewPlace() {
 
 
   const charactorChange = (event) => {
-    setInputText(event.target.valur);
+    setInputText(event.target.value);
   }
 
   const handleShow = () => setShow(true);
@@ -283,7 +283,9 @@ function AddNewPlace() {
                         <div className="card">
                           {showLocation ? (<div className="card-header">
                             <ReverseGeoLocation />
-                          </div>) : (<ReverseGeoLocation />)}
+                          </div>) : (<div className="card-header">
+                            <ReverseGeoLocation />
+                          </div>)}
                         </div>
                       </div>
                       <Row className="place_btn">

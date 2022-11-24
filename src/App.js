@@ -40,6 +40,7 @@ import AddNewPlace from "./pages/AddNewPlace/AddNewPlace.jsx";
 import Popup from './pages/AddNewPlace/Popup.js';
 import Popup2 from './pages/AddNewPlace/Popup2.js';
 import SelectPopup from "./pages/AddNewPlace/SelectPopup.js";
+import firebase from './firebase'
 
 
 
@@ -48,6 +49,14 @@ import SelectPopup from "./pages/AddNewPlace/SelectPopup.js";
 // import HelpingHandsNew from "./pages/HelpingHands/HelpingHandsNew.js";
 // import TermsConditions from "./pages/TermsConditions/TermsConditions.jsx";
 function App() {
+  React.useEffect(()=>{
+    const msg=firebase.messaging();
+    msg.requestPermission().then(()=>{
+      return msg.getToken();
+    }).then((data)=>{
+      console.warn("token",data)
+    })
+  })
   return (
     <Router>
   {/*<SideBar>*/}
@@ -84,7 +93,7 @@ function App() {
         <Route exact path="/location" element={<Location/>}/>
         <Route exact path="/popup" element={<Popup/>}/>
         <Route exact path="/popups" element={<Popup2/>}/>
-        <Route path="/*" element={<h1>Page Not Found 404</h1>}/>
+        <Route exact path="/*" element={<h1>Page Not Found 404</h1>}/>
         <Route exact path="/selectpopup" element={<SelectPopup/>}/>
 
     

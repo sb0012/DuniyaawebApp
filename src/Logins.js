@@ -1,48 +1,55 @@
-import React,{useState} from 'react'
-import {GoogleLogin,GoogleLogout} from 'react-google-login';
+import React from 'react'
+function App() {
+  const [ profile, setProfile ] = useState([]);
+  const clientId = '386932037035-k8v833noqjk7m4auae0t83vnkrqvvg3t.apps.googleusercontent.com';
+  useEffect(() => {
+      const initClient = () => {
+          gapi.client.init({
+              clientId: clientId,
+              scope: ''
+          });
+      };
+      gapi.load('client:auth2', initClient);
+  });
 
-const Logins = () => {
-    const clientId="875159678415-pt2v2m50gmea8cj12n5eg9in71i2hg82.apps.googleusercontent.com";
-    const [showloginbutton,setShowLoginButton]=useState(true);
-    const [showlogoutbutton,setShowLogoutButton]=useState(false);
+  const onSuccess = (res) => {
+      setProfile(res.profileObj);
+  };
 
-    const onLoginSuccess=(res)=>{
-        console.log("Logins Success:",res.profileObj);
-        setShowLoginButton(false);
-        setShowLogoutButton(true);
-    }
-    const onFailureSuccess=(res)=>{
-        console.log("Logins Failed:",res);
-    }
-    const onSignoutSuccess=()=>{
-        alert("You have been signed out Successfully");
-        setShowLoginButton(true);
-        setShowLogoutButton(false);
-    }
+  const onFailure = (err) => {
+      console.log('failed', err);
+  };
+
+  const logOut = () => {
+      setProfile(null);
+  };
 
   return (
       <div>
-      {showloginbutton ?
-    <GoogleLogin
-    clientId={clientId}
-    buttonText="Logins"
-    onSuccess={onLoginSuccess}
-    onFailure={onFailureSuccess}
-    cookiePolicy={'single_host_origin'}
-  /> : null
-      }
-      {showlogoutbutton ?
-
-    <GoogleLogout
-      clientId={clientId}
-      buttonText="Logout"
-      onLogoutSuccess={onSignoutSuccess}
-    >
-    </GoogleLogout> : null
-      }
-      
-    </div>
-  )
+          <h2>React Google Login</h2>
+          <br />
+          <br />
+          {profile ? (
+              <div>
+                  <img src={profile.imageUrl} alt="user image" />
+                  <h3>User Logged in</h3>
+                  <p>Name: {profile.name}</p>
+                  <p>Email Address: {profile.email}</p>
+                  <br />
+                  <br />
+                  <GoogleLogout clientId={clientId} buttonText="Log out" onLogoutSuccess={logOut} />
+              </div>
+          ) : (
+              <GoogleLogin
+                  clientId={clientId}
+                  buttonText="Sign in with Google"
+                  onSuccess={onSuccess}
+                  onFailure={onFailure}
+                  cookiePolicy={'single_host_origin'}
+                  isSignedIn={true}
+              />
+          )}
+      </div>
+  );
 }
-
-export default Logins;
+export default App;

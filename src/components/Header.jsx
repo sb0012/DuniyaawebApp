@@ -26,6 +26,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import Popup from '../pages/AddNewPlace/Popup';
+import Login from '../pages/Login/Login';
 
 const StyledApp = styled.div`
  color: ${(props) => props.theme.fontColor};
@@ -85,7 +86,8 @@ export default function Header() {
                   
                   <Nav.Link className={splitLocation[1] === "MyPlaces" ? "active" : ""} href="/MyPlaces">My Places</Nav.Link>
                   <Nav.Link className={splitLocation[1] === "Stepper" ? "active" : ""} href="/Stepper">Stepper</Nav.Link>
-                  <Nav.Link className={splitLocation[1] === "Login" ? "active" : ""} eventKey={2} href="/Login"><span className='me-4'>Login</span></Nav.Link>
+                  {/* <Nav.Link className={splitLocation[1] === "Login" ? "active" : ""} eventKey={2} href="/Login"><span className='me-4'>Login</span></Nav.Link> */}
+                  <Nav.Link className={splitLocation[1] === "Login" ? "active" : ""} eventKey={2} href="/Login"><span className='me-4'> <Login/> </span></Nav.Link>
                     {/* <Nav.Link href="/VoiceSearchBar"><span className='mdlogo'><FaMicrophone /></span></Nav.Link> */}
                     {/* nitification div */}
                   <Nav.Link><div className="App">

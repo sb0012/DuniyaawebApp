@@ -1,0 +1,14 @@
+.border{
+    border: 1px solid #7f0c86 !important;
+    margin-top: 15px;
+}
+.color{
+    color: #7f0c86;
+}
+
+.oneline{
+    display: inline;
+}
+.oneline p{
+    text-align: center;
+}

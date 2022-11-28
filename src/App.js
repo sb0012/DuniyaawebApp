@@ -41,6 +41,9 @@ import Popup from './pages/AddNewPlace/Popup.js';
 import Popup2 from './pages/AddNewPlace/Popup2.js';
 import SelectPopup from "./pages/AddNewPlace/SelectPopup.js";
 import firebase from './firebase'
+import PrivacyAndPolicy from "./pages/privacy/PrivacyAndPolicy.js";
+import TermsAndCondition from "./pages/privacy/TermsAndCondition.js";
+
 
 
 
@@ -95,6 +98,8 @@ function App() {
         <Route exact path="/popups" element={<Popup2/>}/>
         <Route exact path="/*" element={<h1>Page Not Found 404</h1>}/>
         <Route exact path="/selectpopup" element={<SelectPopup/>}/>
+        <Route exact path="/privacypolicy" element={<PrivacyAndPolicy/>}/>
+        <Route exact path="/termscondition" element={<TermsAndCondition/>}/>
 
     
       

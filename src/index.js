@@ -6,16 +6,20 @@ import reportWebVitals from './reportWebVitals';
 // import './Logins.css'
 import "./pages/Language/i18n.js";
 import Time from './pages/AddNewPlace/Time';
+import LoginWithGoogleUser from './pages/Login/LoginWithGoogleUser';
+
 // import LOginpage from './pages/AllPlaces/LOginpage';
 // import Login1 from './pages/Login/Login1';
 // import PlaceDetails from './pages/AddNewPlace/PlaceDetails';
 // import Logins from "./Logins.js";
 
 
+
 ReactDOM.render(
   <React.StrictMode>
     {/* <Login1/> */}
    <App />
+{/* <LoginWithGoogleUser/> */}
    {/* <Time/> */}
    {/* <LOginpage/> */}
   </React.StrictMode>,
